@@ -55,6 +55,9 @@ https://www.geeksforgeeks.org/count-minimum-swap-to-make-string-palindrome/
 17. Longest Pair sum
 18. Questions asked from Kanishk in Adobe interview - 
     i. Platforms on Bustand problem
+    ii. LRU Cache
+    ii. Decode String LC: 394 (https://leetcode.com/problems/decode-string/)
+    iii. Height of tree 
     ii. How to check if a tree is a binary tree
     iii.LLD of Payment Gateway
     iv. Design your own API (Asynchornous, Interface, HTTP methods )
@@ -103,6 +106,9 @@ Variant Given number of cards find number of houses that can be formed with maxi
 28. Binary to Decimal and Decimal to Binary
 https://dotnettutorials.net/lesson/binary-to-decimal-conversion-in-csharp/
 https://www.tutorialspoint.com/Chash-Program-to-Convert-Binary-to-Decimal
+
+29. Check whether three given integer values are in the range 20..50 inclusive
+https://www.w3resource.com/c-programming-exercises/basic-algo/c-programming-basic-algorithm-exercises-8.php
 
 
 How to prepare from Chandra
