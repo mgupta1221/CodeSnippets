@@ -1,0 +1,161 @@
+=================================
+1
+You are given a string text consisting of English letters and spaces. Find all the capital and
+lowercase 'r' in it and insert a capital 'K' right before each one of them.
+Example
+ For text = "fluffy", the output should be solution(text) — "KfluKfKfy"
+
+For text = "force", the output should be solution(text) = "Kforce"
+
+
+Solution---
+StringBuilder result = new StringBuilder();
+
+        foreach (char c in text) {
+            if (c == 'r' || c == 'R') {
+                result.Append('K');
+            }
+            result.Append(c);
+        }
+
+return result.ToString();
+
+
+=================================
+2   SQL
+
+An educational magazine publishes rankings of students and their colleges in a competition in building unmanned aerial
+vehicles (drones). Students who participated in the competition in different years, their ranking in the competition, and their
+colleges are contained in the following tables:
+
+TABLE colleges
+id INTEGER PRIMARY KEY
+name VARCHAR(se) NOT NULL
+
+TABLE Students
+id INTEGER PRIMARY KEY
+name VARCHAR(5e) NOT NULL
+collegeld INTEGER
+FOREIGN KEY (collegeld) REFERENCES colleges(id)
+
+TABLE rankings
+studentld INTEGER
+ranking INTEGER NOT NULL
+year INTEGER NOT NULL
+FOREIGN KEY (studentld) REFERENCES students(id)
+
+
+Write a query that lists all colleges that have at least one student With a ranking between 1 and 3 (both inclusive), for the year
+2015. The query should return:
+• The college name.
+• The rank of their best ranking student for 2015,
+• The number of students who had rankings between 1 and 3 (both inclusive) for the year 2015.
+Rank I is the best rank, rank 2 the second-best, and so on. More than one student can tie for a rank in a year.
+
+====================================================================
+3 SQL
+
+You need to connect to a remote database and extract some information from it. The problem is, you don't know the name of the most important table in this database! You were told that it should start with the letter e and end with the letter s . Now you want to find all possible candidates, i.e. tables with such names, as well as their column names and their datatypes. It is guaranteed that at least one such table exists in the database.
+You have already connected to the database named ri_db Now you just need to implement a
+procedure that will find the information about the most important table in it, as described above
+
+The resulting table should have the following structure:
+• tab_name : the name of the found table;
+• col_name : the name of the column in the found table;
+• data_type : the type of this column.
+
+
+
+The rows in the output should be sorted first by the name Of the table, then by the column names-
+
+Events table contain columns named event_date and event_name
+Guestlist table contains columns named id, first_name and surname
+
+
+Solution
+=========
+SELECT 
+    table_name AS tab_name,
+    column_name AS col_name,
+    data_type
+FROM 
+    information_schema.columns
+WHERE 
+    table_name LIKE 'e%s' AND
+    table_schema = 'ri_db'
+ORDER BY 
+    tab_name,
+    col_name;
+
+
+====================================================================
+4 SQL
+
+You are really interested in statistics, and your new project is to gather some information about the users of a big social network. More specifically, you want to know which countries these users are from. Using the social network's API, you managed to collect enough data to compose two tables users and cities, which have the following structures:
+
+. users:
+id : the unique user ID;
+city : the name of the city where this user lives;
+. cities:
+city : a unique city name;
+country : the name of the country where this city is located.
+
+Given the tables users and cities, write a select statement that returns two columns id and country consisting of user id s and the countries where they live respectively, If a user's city is missing from the cities table, the country column should contain "unknown" instead. Return the table sorted by users' ids.
+
+users table contains columns named id and city
+cities table contains columns named city and country
+
+
+Solution
+========
+
+
+SELECT u.id, COALESCE(c.country, 'unknown') AS country
+FROM users u
+LEFT JOIN cities c ON u.city = c.city
+ORDER BY u.id;
+
+Using COALESCE function to replace NULL values with 'unknown' in the country column.
+
+
+
+
+====================================================================
+5
+
+Given a text consisting of English letters, spaces, and punctuation marks ,, ., ?, !, your task is to correct the following mistakes in the text:
+There shouldn't be a space before any punctuation marks;
+Each punctuation mark which is not the last character of the text should be followed by a space.
+
+Example
+For text = "This sentence contains both lowercase and uppercase English letters ,  punctuation marks,and spaces.", the output should be punctuationMistakes(text) = "This sentence contains both lowercase and uppercase English letters, punctuation marks, and spaces."
+
+
+====================================================================
+5
+
+
+====================================================================
+6
+
+
+
+====================================================================
+7
+
+
+====================================================================
+8
+
+
+
+====================================================================
+9
+
+====================================================================
+4
+
+
+
+====================================================================
+4

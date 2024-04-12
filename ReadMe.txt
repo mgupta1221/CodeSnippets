@@ -110,6 +110,22 @@ https://www.tutorialspoint.com/Chash-Program-to-Convert-Binary-to-Decimal
 29. Check whether three given integer values are in the range 20..50 inclusive
 https://www.w3resource.com/c-programming-exercises/basic-algo/c-programming-basic-algorithm-exercises-8.php
 
+Alation
+30. Find Permutations of a string
+
+31. Find Cycle in a Directed Graph 
+https://www.geeksforgeeks.org/find-whether-it-is-possible-to-finish-all-tasks-or-not-from-given-dependencies/
+
+32. Majority Element
+https://www.geeksforgeeks.org/majority-element/
+Check Moore’s Voting Algorithm
+
+33. Version compare problem
+https://www.geeksforgeeks.org/compare-two-version-numbers/
+
+
+
+
 
 How to prepare from Chandra
 System Design:
