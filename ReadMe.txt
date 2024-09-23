@@ -135,6 +135,58 @@ public int solution( int[] A);
 that, given an array A consisting of N integers, returns the smallest number of moves required to make all elements in the array pairwise distinct. If the result is greater than 1,000,000,000 the function should return -1.
 
 
+35. You are given a map of the Roman Empire. There are N + 1 cities (numbered from O to N) and N directed roads between them. The road network is connected; that is, ignoring the directions of roads, there is a route between each pair of cities.
+The capital of the Roman Empire is Rome. We know that all roads lead to Rome. This means that there is a route from each city to Rome. Your task is to find Rome on the map, or decide that it is not there.
+The roads are described by two arrays A and B of N integers each. For each integer K (0<= K < N), there exists a road from city A[K] to city B[K].
+Write a function in c# language:
+
+class Solution {
+public int solution (int[] A ,int[] B);
+}
+
+that, given two arrays A and B, returns the number of the city which is Rome (the city that can be reached from all other cities). If no such city
+exists, your function should return -1.
+
+Examples:
+1. Given A = [1, 2, 3] and B = [O, O, 0] the function should return O. Rome has the number O on the map.
+
+2. Given A = [O, 1, 2, 4, 5] and B = [2, 3, 3, 3, 2], the function should return 3. Rome has the number 3 on the map. From cities 1 , 2 and 4 there is a direct road to city 3. From cities O and 5, the roads to city 3 go through city 2.
+
+3. Given A = [2, 3, 3, 4] and B = [1,1,0,0], the function should return —1. There is no Rome on the map.
+
+
+
+36. You love playing with LEGO blocks. Initially, you have N towers of different heights. As you look at the towers, you think they would look more beautiful if all of them had the same height. However, you can only increase (if necessary) the height of a tower. 
+Given the initial representation Of the towers, your task is to determine the minimum number of blocks you will need to make all the towers of the same height. You can assume that the height of each block is 1. Input is  The first line of the input contains an integer N, representing the number of LEGO towers that you have.
+The second line of the input contains N integers as h1, h2,... hN, hi represents the height Of the ith tower. 
+Output
+Print the minimum number of blocks you need to ensure that all towers have the same height. 
+Write the program in c#:
+
+Solution: 
+ public static int solv(List<int> h)
+    {
+        // Find the maximum height in the list
+        int maxHeight = 0;
+        foreach (int height in h)
+        {
+            if (height > maxHeight)
+            {
+                maxHeight = height;
+            }
+        }        
+        // Calculate the total number of blocks needed to make all towers the same height
+        int blocksNeeded = 0;
+        foreach (int height in h)
+        {
+            blocksNeeded += (maxHeight - height);
+        }        
+        return blocksNeeded;
+    }
+  
+
+  
+37. 
 
 
 How to prepare from Chandra
