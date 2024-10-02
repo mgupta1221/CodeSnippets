@@ -186,7 +186,119 @@ Solution:
   
 
   
-37. 
+37. Find deepest tree node given:
+Write a program for binary Tree deepest Node search from the node that is passed in as input 
+ Solution use BFS  using Queue
+
+38. A team of data analysts at Amazon is working to identify patterns in data. During their analysis, they found 
+a category of string they call a dominant string:
+• It has an even length.
+• And the string contains at least one character having frequency matching the exactly 
+half of the length of the string.
+
+Given a string s of length n, determine the number of its distinct substrings that are 
+dominant strings.
+Example
+s = "idafddfii".
+All even-length substrings of s with a frequency of any character that is exactly half their length are:
+There are 13 dominant substrings in s.
+
+Complete the function getDominantStringCount(string s) in C# below.
+string s: the string to analyze
+Output will be int: the number of dominant substrings in s
+
+THIS QUESTION 38 was asked in Amazon and its 2 solutions are in ReadMeQuestion38Solution.txt
+
+39. Given a string s, find the length of the longest substring without repeating characters.
+
+
+40. An application requires different date formats to be converted into one common
+date format.
+Implement the function TransformDateFormat which accepts a list of dates as
+strings, and returns a new list Of strings that represents dates in the format Of
+YYYYDDMM, where YYYY, MM, and DD are numbers representing year, month, and
+day, respectively. All incoming dates will be valid dates, but only those in one of the
+following formats: Y YYYp DDP MM, YYYY/MM/DD, or MM-DD-YYYY, should be included in the returned list.
+For example, TransformDateFormat(new List {"2010/02/20", 2 016p 19p 12, "11-18-
+2012", "2018 12 24", "20130720"}) should return the list {"20102002", 20161912",
+'20121811"}.
+public static List<string> TransformDateFormat(List<string> dates){}
+
+
+
+41. you are given an array of N integers. your task is to count the number of ways you can choose a pair(A[i], A[j] ) from the array such that :
+1<=i<=j<=N, i!=j
+A[i]+A[j] is odd
+Note: O(n) complexity is expected.
+
+Input
+The first line of input contains an integer N, representing the size of the array.
+The second line of input contains N space-separated integers. representing the elements of the array.
+Output 
+Print an integer representing the number of ways you can choose a pair that satisfies the given conditions.
+
+public static long solve(List<int> A)
+
+
+42. You are given a complex list of n products, each with a name, price, and weight.
+Find out how many duplicate products are present within the list. Duplicate products contain identical parameters for all fields in the list (i.e. name, price, and weight).
+Example:
+There are n = 5 products with attributes listed in three arrays, aligned by index.
+name = [ball, bat, glove, glove, glove]
+price=[2,3,1,2,1]
+weight =[2,5, 1, 1, 1]
+
+The first two items are unique.
+The two gloves at indices 2 and 4 are equal in all three attributes so there is 1 duplicate.
+The glove at index 3 has a different price from the other two, so it is not a duplicate.
+There is 1 duplicate item in the original list.
+
+
+Complete the function numDuplicates(). The function must return an integer denoting the number of duplicates within the product list.
+
+numDuplicates has the following parameter(s):
+string name[n]. string array of size n, where names[i] denotes the name of the product at the index of i.
+int price[n]. int array of size n, where prices[i] denotes the price of the product at the index of i.
+int weight[n]. int array of size n, where weights[i] denotes the weight of the product at the index of i.
+
+
+public static int numDuplicates(List<string> name,List<int> price, List<int> weight){}
+
+
+43. You are given a complex list of n products, each with a name, price, and weight.
+Find out how many duplicate products are present within the list. Duplicate products contain identical parameters for all fields in the list (i.e. name, price, and weight).
+Example:
+There are n = 5 products with attributes listed in three arrays, aligned by index.
+name = [ball, bat, glove, glove, glove]
+price=[2,3,1,2,1]
+weight =[2,5, 1, 1, 1]
+
+The first two items are unique.
+The two gloves at indices 2 and 4 are equal in all three attributes so there is 1 duplicate.
+The glove at index 3 has a different price from the other two, so it is not a duplicate.
+There is 1 duplicate item in the original list.
+
+Complete the function numDuplicates(). The function must return an integer denoting the number of duplicates within the product list.
+
+numDuplicates has the following parameter(s):
+string name[n]. string array of size n, where names[i] denotes the name of the product at the index of i.
+int price[n]. int array of size n, where prices[i] denotes the price of the product at the index of i.
+int weight[n]. int array of size n, where weights[i] denotes the weight of the product at the index of i.
+
+public static int numDuplicates(List<string> name,List<int> price, List<int> weight){}
+
+
+
+44. Dollar amounts are being entered into our system via a spreadsheet import.
+Implement a function which takes a list of strings and returns a list of corresponding decimal values.
+If a string can't be converted to a decimal. return null.
+
+public static List<decimal?> Convert( List<String> totals){
+}
+
+
+45. 
+
 
 
 How to prepare from Chandra
@@ -353,3 +465,10 @@ Again, it’s not a comprehensive list but if you are struggling with topics lik
 Systerm Design
 https://github.com/donnemartin/system-design-primer
 
+
+Types of databases and their usecase
+1. Key-value database (e.g., DynamoDB, Redis)	-	Key-value databases are highly scalable and ideal for high-throughput, low-latency operations, making them well-suited for real-time vote tracking.
+2. Document database (e.g., MongoDB)	-	Document databases are more complex and less performant for quick retrieval of votes compared to key-value databases. They are more useful if there's a need for storing nested structures, but not critical for voting data.
+3. Graph database (e.g., Amazon Neptune)	- Graph databases are optimized for storing relationships between entities, which isn't the main need for a voting system.
+4. Ledger database (e.g., Amazon QLDB)	- Ledger databases ensure data integrity and immutability, which may be useful for auditing purposes. However, this isn't the primary requirement for a real-time voting scenario.
+5. Distributed data processing system (Apache Hadoop/Spark)	-Hadoop or Spark is suitable for batch processing large volumes of data but is not optimal for real-time voting. Real-time, low-latency processing is more crucial for this use case.
