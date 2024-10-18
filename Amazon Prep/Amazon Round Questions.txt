@@ -1,0 +1,116 @@
+Amazon Round
+
+Round 1
+Q1: Describe a time work outside your comfort area what is your learning?
+Follow up: Would you have done anything differently?
+
+Q2: Can you give an example when you were able to deliver under tight deadline and any sacrifice you made?
+Follow up: how it impacted scope? Anything you could have done differently?
+
+Q3 (Technical):
+Implement a hierarchical permission program that supports the following operations:
+- addUser(userId: int, parentUserId: int): Add a new user to the system, with the given userld. If parentUserId is provided,
+the new user will be added as a child of the existing user with the given parentuserld. If parentuserld is not provided,
+the new user will be added as a root user.
+- hasPermission(userId: int, permission: str) - > bool: Determine whether the user With the given userld has the specified permission.
+user inherits all permissions from their parent and all ancestors in the hierarchy.
+- grantpermission(userld: int, permission: str): Grants permission to the given userld.
+The hierarchical permission program should handle the following scenarios:
+multiple users can be added to the system.
+A user inherits all permissions from their parent and all ancestors in the hierarchy.
+Write the program in java
+
+Follow-up: what is runtime complexity?
+There is feature request to remove user?
+how to handle if root is removed ?
+how to handle haspermission method with many users to enhance the performance to optimize ?
+
+
+
+Round 2:
+
+Q4: tell me a case where you uncovered a significant problem in the development project
+Followup : how you build the consensus with the management to make the change?
+anything which could have done better?
+
+
+
+Q5: imagine a time when you had a brilliant idea which could have been hlpeful in the development project as a software developer and management rejected the idea
+
+
+Q6: Help me with high level design of security event logging and monitoring system. Explain all parts of this system and explain all components? Assume astructure where events are coming from multiple sources to a system. a system which can monitor such logs
+
+Follow up: 
+Events can be structured or unstructured and size can be petabytes ...millions of events per day that is the scale. We have to store the data for 6 months..how would to handle  these things..tell me the system design now?
+
+Help me with amazon kafka details?
+any other solution to this as scale is too high instead of kafka
+
+
+
+Round 3:
+
+
+Q7: Tell me about a time hard decision you made which sacrifice short term goals for benefit of long term as software developer
+Follow up: what was the issue with api
+
+Q8: describe a difficult interaction with the customer as a software developer
+
+
+
+Q9: Write a program now in java to handle below sceanrio
+most of filesystems (linux, windows, macos) all organize data by files and directories.
+the key function we use often is to search files in the filesystems by their names/ types etc.
+help design and implement some classes to hold files and directories and also an interface/ api to support searching files by names?
+Follow up:
+Also in search function to handle multiple search criteria like filetype like pdf or text
+
+
+Round 4: 
+
+Q10: tell me a time when you make any thing simpler for customer or users of the application as a software developer
+
+Followup :give one example of situation where number of clicks reduced
+
+
+Q11: Given a log of website requests,
+where each request entry contains (time, customerId, page visited),
+find the top 3-page sequence visited.
+For example, if we have two customers,
+and we log CustomerA visiting page A->B->C->D->E and customerB visiting E->B->C->D->A,
+then the top 3-page sequence is B->C->D.
+
+LogEntry{
+long timeSteamp;
+string customerId
+String pageVisited
+}
+
+Write the program in java
+
+
+Follow up:
+
+how to handle tie cases?
+optimize this code ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
