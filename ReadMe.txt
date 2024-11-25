@@ -297,7 +297,32 @@ public static List<decimal?> Convert( List<String> totals){
 }
 
 
-45. 
+45. There are two List<int> inputs, and we need to return a combination of the first and second lists without any duplicates in C# without using any prebuilt functions
+
+46. Given n images to process, where each image requires specific filters applied for a defined time
+frame. The cost to apply filters to the ith image is filterCost[i]. Each image must undergo
+processing from the start day, startDay[i], to the end day, endDay(i] (inclusive), where O <= i < n.
+
+
+There is an exclusive offer that a filter may be applied to all n images at a discounted rate, discountPrice, per day.
+
+Devise a strategy to minimize costs and apply the necessary filters to each image during its designated processing period. The goal is to create an efficient image processing plan that adheres
+to time constraints and budget considerations. Return the minimum cost modulo (10^9 + 7).
+Example
+Given n=3, filterCost= [2, 3, 4], startDay= [1, 1, 2], endDay= [2, 3, 4] and discountPrice= 6.
+
+
+Applying filters on all the images at 6 per day on the 2nd and 3rd day will be optimal.
+The modulo of the final cost is 5 + 6 + 6 +4= 21.
+
+Write the algo in following function in java :
+
+public static int getMinPreocessingCost(List<Integer> filterCost, list<integer> starttime, List<Integer> endTime, int discountPrice){
+
+}
+
+
+47. 
 
 
 
