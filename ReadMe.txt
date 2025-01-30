@@ -75,6 +75,9 @@ https://www.geeksforgeeks.org/count-minimum-swap-to-make-string-palindrome/
     vi.  Design a Push Notification module - (Can be part of BookmyShow, Twitter, etc)
     vii. Design BookMyShhow 
     viii.Design PArking lot
+    ix.  Design a system to track the number of people in a building
+    x.  Design a billing system like AWS - https://mecha-mind.medium.com/system-design-billing-system-844047e916ff
+    
 
 20. 20. https://tutorialhorizon.com/algorithms/given-an-array-find-the-number-of-all-pairs-with-odd-sum/
 
@@ -322,7 +325,52 @@ public static int getMinPreocessingCost(List<Integer> filterCost, list<integer> 
 }
 
 
-47. 
+47. LRU cache with max Capacity (AMAZON real interview
+
+48. Amazon Behaviour   Questions
+Q. Tell me about a time where you faced problem with multiple level in it and how you 
+solved what you learnt from it as softare developer?
+STAR (Situation, Task, Action, Result) in STAR format
+
+Ans:I ran into a pretty complex issue when we were integrating a third-party logistics API for real-time shipment tracking. The problem had multiple layers—technical, performance-related, and external dependencies.
+
+- Technical Challenge: The API had inconsistent response times, sometimes taking 10+ seconds, which slowed down our order tracking dashboard.
+- System Design Issue: Our architecture wasn’t built for handling delayed responses well, leading to UI timeouts and a poor user experience.
+- External Dependency: The third-party provider had rate limits and occasional downtime, which wasn’t in our control.
+
+To solve it, I took a multi-step approach:
+
+- Optimized API Calls: Moved from synchronous API calls to an event-driven model using AWS SQS. Instead of waiting on responses, we processed updates asynchronously.
+- Caching Layer: Implemented a Redis-based caching layer to store the latest tracking data, reducing the need for frequent external calls.
+- Error Handling & Fallbacks: Added retry mechanisms with exponential backoff and a fallback to the last known status when the API was down.
+
+- Optimized System Design (Event-Driven & Caching Approach)
+
+New Architecture
+Frontend:
+
+Instead of polling, the UI subscribed to WebSocket events for real-time updates.
+Backend (Node.js + Express with Event Processing):
+
+Step 1: When a tracking request came in, instead of calling the API synchronously, a job was queued in AWS SQS (or Kafka for high-scale use cases).
+Step 2: A background worker pulled the job from the queue and called the logistics API asynchronously.
+Step 3: The response was stored in Redis (TTL 5 mins) for fast retrieval.
+Step 4: If Redis didn’t have fresh data, the latest tracking info was fetched from PostgreSQL as a fallback.
+
+Resilience Features:
+a) Rate Limit Handling: Implemented exponential backoff for failed requests.
+b) Circuit Breaker Pattern: If the API was down, served the last known status from cache/db instead of failing.
+STAR (Situation, Task, Action, Result) in STAR format
+
+✅ Reduced latency by 60% (faster UI load times).
+✅ Improved scalability (no unnecessary direct API calls, handling more concurrent users).
+✅ Better fault tolerance (handled API failures without breaking user experience).
+✅ Decoupling using events made it easy to swap APIs if needed.
+
+
+49. 
+
+
 
 
 
