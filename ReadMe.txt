@@ -368,7 +368,7 @@ STAR (Situation, Task, Action, Result) in STAR format
 ✅ Decoupling using events made it easy to swap APIs if needed.
 
 
-49. 
+49. Product of Array Except Self (Turing interview)
 
 
 
